@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * oi armstrong numbers einai autoi pou an upsosoume ton kathe ena
- * h sthn (athrisma psifiwn arithmoy) kai tous prosthesoume dinei ton ariumo
+ *  Armstrong numbers.
+ *
  */
 public class ArmstrongApp {
 
