@@ -307,5 +307,4 @@ public class MobileApp {
             ex.printStackTrace();
         }
     }
-
 }
