@@ -1,4 +1,4 @@
-package gr.aueb.cf.projects;
+package gr.aueb.cf.projects.testProjects;
 
 import java.io.*;
 import java.util.ArrayList;
