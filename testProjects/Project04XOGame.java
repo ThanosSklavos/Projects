@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Project04XOGame {
 
-    public static Scanner in = new Scanner(System.in);
-    public static char[][] board = {
+    static Scanner in = new Scanner(System.in);
+    static char[][] board = {
             {' ', ' ', ' '},
             {' ', ' ', ' '},
             {' ', ' ', ' '}};
