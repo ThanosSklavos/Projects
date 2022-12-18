@@ -1,11 +1,11 @@
-package gr.aueb.cf.projects;
+package gr.aueb.cf.projects.testProjects;
 
 import java.util.Scanner;
 
 public class Project04XOGame {
 
     public static Scanner in = new Scanner(System.in);
-    public static char[][] grid = {
+    public static char[][] board = {
             {' ', ' ', ' '},
             {' ', ' ', ' '},
             {' ', ' ', ' '}};
@@ -36,7 +36,7 @@ public class Project04XOGame {
            System.out.println("Please choose a column: ");
            col = getChoice();
 
-           while (grid[row][col] != ' ') {
+           while (board[row][col] != ' ') {
                System.out.println("Please choose an empty block: ");
                System.out.println("Please choose a row: ");
                row = getChoice();
@@ -44,7 +44,7 @@ public class Project04XOGame {
                col = getChoice();
            }
 
-           grid[row][col] = (player == 1) ? 'O' : 'X';
+           board[row][col] = (player == 1) ? 'O' : 'X';
            printBoard();
 
 
@@ -60,11 +60,11 @@ public class Project04XOGame {
 
     public static void  printBoard(){
         System.out.println("  +---+---+---+");
-        System.out.println(2 +  " | " + grid[2][0] +  " | " + grid[2][1] + " | " + grid[2][2] + " |");
+        System.out.println(2 +  " | " + board[2][0] +  " | " + board[2][1] + " | " + board[2][2] + " |");
         System.out.println("  +---+---+---+");
-        System.out.println(1 +  " | " + grid[1][0] +  " | " + grid[1][1] + " | " + grid[1][2] + " |");
+        System.out.println(1 +  " | " + board[1][0] +  " | " + board[1][1] + " | " + board[1][2] + " |");
         System.out.println("  +---+---+---+");
-        System.out.println(0 +  " | " + grid[0][0] +  " | " + grid[0][1] + " | " + grid[0][2] + " |");
+        System.out.println(0 +  " | " + board[0][0] +  " | " + board[0][1] + " | " + board[0][2] + " |");
         System.out.println("  +---+---+---+");
         System.out.println("    0   1   2  ");
     }
@@ -86,22 +86,22 @@ public class Project04XOGame {
     }
 
     public static boolean checkForWinner() {
-         return (grid[0][0] == grid[0][1] && grid[0][1] == grid[0][2] && grid[0][2] != ' ') ||
-                (grid[1][0] == grid[1][1] && grid[1][1] == grid[1][2] && grid[1][2] != ' ') ||
-                (grid[2][0] == grid[2][1] && grid[2][1] == grid[2][2] && grid[2][2] != ' ') ||
+         return (board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][2] != ' ') ||
+                (board[1][0] == board[1][1] && board[1][1] == board[1][2] && board[1][2] != ' ') ||
+                (board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][2] != ' ') ||
 
-                (grid[2][0] == grid[1][1] && grid[1][1] == grid[0][2] && grid[0][2] != ' ') ||
-                (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[2][2] != ' ') ||
+                (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[0][2] != ' ') ||
+                (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[2][2] != ' ') ||
 
-                (grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0] && grid[2][0] != ' ') ||
-                (grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1] && grid[2][1] != ' ') ||
-                (grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2] && grid[2][2] != ' ');
+                (board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[2][0] != ' ') ||
+                (board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[2][1] != ' ') ||
+                (board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[2][2] != ' ');
     }
 
     public static boolean boardIsFull() {
         int emptyBlocks = 0;
 
-        for (char[] chars : grid) {
+        for (char[] chars : board) {
             for (char ch : chars) {
                 if (ch == ' ') emptyBlocks++;
             }
@@ -115,9 +115,9 @@ public class Project04XOGame {
             String choice = in.nextLine();
             if (choice.matches("[yY]")) {
 
-                for (int i = 0; i < grid.length; i++) {          //reset board
-                    for (int j = 0; j < grid[i].length; j++) {
-                        grid[i][j] = ' ';
+                for (int i = 0; i < board.length; i++) {          //reset board
+                    for (int j = 0; j < board[i].length; j++) {
+                        board[i][j] = ' ';
                     }
                 }
                 return true;
