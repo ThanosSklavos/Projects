@@ -1,7 +1,10 @@
 package gr.aueb.cf.projects.testProjects;
 
+/** Η πολυπλοκότητα χρόνου είναι O(n) γιατί χρησιμοποιούμε μόνο μία for.
+ *  Διατρέχουμε τον πίνακα από την αρχή κρατόντας το μέγιστο άθροισμα από την αρχή μέχρι το σημείο που
+ *  βρίσκεται το i και συγκρίνουμε με τον επόμενο αριθμό στον πίνακα
+ */
 public class Project02MaximumSumSubarray {
-
     public static void main(String[] args) {
         int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
