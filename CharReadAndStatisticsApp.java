@@ -120,7 +120,6 @@ public class CharReadAndStatisticsApp {
                 return i;
             }
         }
-
         return -1;
     }
 
